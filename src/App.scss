@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap");
+body {
+    font-family: "PT Sans Narrow", sans-serif;
+}
+
+:root {
+    --light-blue: #f0f8ff;
+    --azure: #007fff;
+    --intel-blue: #0071c5;
+    --duke-blue: #012169;
+    --iris: #5a4fcf;
+    --dark-gray: #242424;
+    --almost-black: #151515;
+}
+
+body {
+    background: var(--almost-black);
+}
+
+header {
+    background: url(./assets/header-bg.png),
+        linear-gradient(
+            189deg,
+            rgba(23, 20, 39, 0.7764355742296919) 0%,
+            rgba(21, 21, 21, 1) 80%
+        );
+    background-position: bottom;
+}

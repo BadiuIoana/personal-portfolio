@@ -1,0 +1,146 @@
+.nav-wrapper {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: relative;
+    padding: 1rem;
+
+    p.text-light {
+        color: #ffffff;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-shadow: 3px 3px 5px rgba(39, 76, 97, 0.8);
+    }
+
+    nav {
+        position: absolute;
+        text-align: center;
+        top: 100%;
+        right: 0;
+        left: 0;
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform 400ms ease-in-out;
+
+        ul {
+            li {
+                list-style: none;
+                padding: 0.5rem 0;
+                text-shadow: 3px 3px 5px rgba(39, 76, 97, 0.8);
+
+                a {
+                    text-decoration: none;
+                    color: #ffffff;
+                    font-size: 18px;
+                    opacity: 0;
+                    font-weight: 700;
+                    transition: opacity 150ms ease-in-out;
+                }
+            }
+        }
+    }
+
+    .nav-toggle:checked ~ nav {
+        transform: scale(1, 1);
+
+        a {
+            opacity: 1;
+            transition: opacity 250ms ease-in-out 250ms;
+        }
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-toggle-label {
+        position: absolute;
+        right: 0;
+        margin-right: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-toggle:not(:checked) ~ .nav-toggle-label {
+        span,
+        span::before,
+        span::after {
+            display: block;
+            background: #ffffff;
+            height: 2px;
+            width: 2em;
+            border-radius: 2px;
+            position: relative;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        span {
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+            }
+
+            &::before {
+                bottom: 7px;
+            }
+
+            &::after {
+                top: 7px;
+            }
+        }
+    }
+
+    .nav-toggle:checked ~ .nav-toggle-label {
+        span,
+        span::before,
+        span::after {
+            display: block;
+            background: #ffffff;
+            height: 2px;
+            width: 2em;
+            position: relative;
+            transform: rotate(45deg);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        span {
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0px;
+                transform: rotate(-90deg);
+            }
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+        padding: 0 1rem;
+
+        .nav-toggle-label {
+            display: none;
+        }
+
+        nav {
+            all: unset;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            ul {
+                display: flex;
+                gap: 1rem;
+                justify-content: flex-end;
+
+                li {
+                    a {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
