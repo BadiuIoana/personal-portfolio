@@ -1,28 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
 body {
-    font-family: "PT Sans Narrow", sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 :root {
     --light-blue: #f0f8ff;
+    --gray: #e5e4e2;
     --azure: #007fff;
-    --intel-blue: #0071c5;
+    --intel-blue: #6190e8;
     --duke-blue: #012169;
     --iris: #5a4fcf;
     --dark-gray: #242424;
     --almost-black: #151515;
 }
 
-body {
-    background: var(--almost-black);
-}
-
-header {
-    background: url(./assets/header-bg.png),
-        linear-gradient(
-            189deg,
-            rgba(23, 20, 39, 0.7764355742296919) 0%,
-            rgba(21, 21, 21, 1) 80%
-        );
-    background-position: bottom;
+p {
+    font-size: 1.125em;
+    font-weight: 500;
+    line-height: 1.33333em;
+    font-family: "Lato", sans-serif;
+    color: var(--almost-black);
 }

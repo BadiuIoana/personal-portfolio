@@ -1,30 +1,33 @@
 import "./_about-us.scss";
-import profilePicture from "../assets/picture-profile.jpeg";
+import profilePicture from "../assets/picture-profile.png";
+import Button from "./Button";
 const AboutUs = () => {
     return (
         <section className='about-us-section'>
-            <div className='content-wrapper'>
-                <p>Hello, there! I'm </p>
-                <h1>Ioana Badiu</h1>
-                <p>
-                    I'm an enthuziastic frontend developer, passionate about
-                    Javascript, CSS and willing to learn more about UX Design as
-                    well!
-                </p>
-                <p>
-                    The main technologies I've worked with are: PHP(also with
-                    Laravel), HTML, CSS and JavaScript (jQuery & Vuejs). I am a
-                    self-taught person so I have practiced React in my free
-                    time.
-                </p>
-                <p>
-                    Do all above sounds good? Then you may want to see my
-                    portfolio projects and drop me a line. Have a nice day.
-                </p>
-            </div>
             <div className='profile-picture-section'>
-                <img src={profilePicture} alt='profile-picture' />
-                <span className='lines'></span>
+                <div className='image-wrapper'>
+                    <span className='parallelogram top'></span>
+                    <span className='dots top'></span>
+                    <img src={profilePicture} alt='profile-picture' />
+                    <span className='parallelogram bottom'></span>
+                    <span className='dots bottom'></span>
+                </div>
+            </div>
+            <div className='content-wrapper'>
+                <h1>
+                    Hi, I'm Ioana and I'm a <br />
+                    <span class='highlighted'>Frontend Developer</span>.
+                </h1>
+                <p>
+                    I'm an enthuziastic developer, based in Pitesti, Romania.
+                    I've 3 years experience working mostly on creating user
+                    interfaces but I've also worked on backend functionallities
+                    as well.
+                </p>
+                <div className='button-wrapper'>
+                    <Button title='Contact' link='#contact' />
+                    <Button title='Check my work' link='#work' />
+                </div>
             </div>
         </section>
     );
