@@ -2,14 +2,15 @@ button {
     border: none;
     background: transparent;
     min-width: 10rem;
+    width: 100%;
 
     .fancy {
         background-color: transparent;
-        border: 2px solid #6190e8;
+        display: block;
+        border: 2px solid #000;
         border-radius: 0.4rem;
         box-sizing: border-box;
         cursor: pointer;
-        display: inline-block;
         font-weight: 700;
         letter-spacing: 0.05em;
         margin: 0;
@@ -27,7 +28,7 @@ button {
             content: " ";
             width: 1.5625rem;
             height: 2px;
-            background: linear-gradient(#6190e8, #a7bfe8);
+            background: #000;
             top: 50%;
             left: 1.5em;
             position: absolute;
@@ -45,7 +46,7 @@ button {
             transition: all 0.3s ease-in-out;
             text-transform: uppercase;
             text-decoration: none;
-            color: #6190e8;
+            color: #000;
         }
 
         .top-key {
@@ -80,7 +81,7 @@ button {
 
         &:hover {
             color: white;
-            background: linear-gradient(#6190e8, #a7bfe8);
+            background: #000;
         }
 
         &:hover::before {
@@ -104,5 +105,13 @@ button {
             right: 0;
             width: 0;
         }
+
+        @media (min-width: 426px) {
+            display: inline-block;
+        }
+    }
+
+    @media (min-width: 426px) {
+        width: auto;
     }
 }

@@ -1,5 +1,6 @@
 import "./_about-us.scss";
 import profilePicture from "../assets/picture-profile.png";
+import profilePictureWebp from "../assets/picture-profile.webp";
 import Button from "./Button";
 const AboutUs = () => {
     return (
@@ -8,7 +9,18 @@ const AboutUs = () => {
                 <div className='image-wrapper'>
                     <span className='parallelogram top'></span>
                     <span className='dots top'></span>
-                    <img src={profilePicture} alt='profile-picture' />
+                    <picture>
+                        <source srcSet={profilePictureWebp} type='image/webp' />
+                        <source srcSet={profilePicture} type='image/png' />
+                        <img
+                            src={profilePicture}
+                            alt='profile-img'
+                            width='300'
+                            height='400'
+                            loading='lazy'
+                        />
+                    </picture>
+                    {/* <img src={profilePicture} alt='profile-picture' /> */}
                     <span className='parallelogram bottom'></span>
                     <span className='dots bottom'></span>
                 </div>
@@ -16,7 +28,7 @@ const AboutUs = () => {
             <div className='content-wrapper'>
                 <h1>
                     Hi, I'm Ioana and I'm a <br />
-                    <span class='highlighted'>Frontend Developer</span>.
+                    <span className='highlighted'>Frontend Developer</span>.
                 </h1>
                 <p>
                     I'm an enthuziastic developer, based in Pitesti, Romania.
