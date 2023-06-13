@@ -11,6 +11,7 @@
     right: 0;
     border-bottom: 2px dotted #ddd;
     background-color: #ffffff;
+    z-index: 4;
 
     h1.text-emphasize {
         font-size: 1rem;
@@ -32,7 +33,6 @@
         background-image: url(../assets/wave-bg.svg);
         background-size: cover;
         height: 100vh;
-        z-index: 10;
 
         ul {
             padding-left: 0;
@@ -151,7 +151,6 @@
     }
 
     @media screen and (min-width: 800px) {
-        background-color: transparent;
         padding: 0 1rem;
         transform-origin: top;
         .nav-toggle-label {
@@ -164,6 +163,7 @@
             justify-content: space-between;
             align-items: center;
             flex-basis: 57%;
+
             ul {
                 display: flex;
                 gap: 1rem;
