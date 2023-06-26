@@ -2,6 +2,10 @@
 body {
     font-family: "Lato", sans-serif;
 }
+*,
+html {
+    scroll-behavior: smooth !important;
+}
 
 :root {
     --light-blue: #f0f8ff;
@@ -20,4 +24,16 @@ p {
     line-height: 1.33333em;
     font-family: "Lato", sans-serif;
     color: var(--almost-black);
+}
+
+.wrapper {
+    max-width: 75rem;
+    margin: 1rem auto;
+    padding: 1.3rem;
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+    line-height: 1em;
 }

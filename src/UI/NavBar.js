@@ -10,13 +10,13 @@ const NavBar = () => {
             <nav>
                 <ul>
                     <li>
-                        <a href='#aboutme'>{"#work"}</a>
+                        <a href='#work'>{"#work"}</a>
                     </li>
                     <li>
-                        <a href='#mywork'>{"#resume"}</a>
+                        <a href='#resume'>{"#resume"}</a>
                     </li>
                     <li>
-                        <a href='#skills'>{"#contact"}</a>
+                        <a href='#contact'>{"#contact"}</a>
                     </li>
                 </ul>
                 <div className='social-icons'>

@@ -1,6 +1,6 @@
 import "./_about-us.scss";
 import profilePicture from "../assets/picture-profile.png";
-import profilePictureWebp from "../assets/picture-profile.webp";
+import profilePictureWebp from "../assets/profile.jpg";
 import Button from "./Button";
 const AboutUs = () => {
     return (
@@ -16,7 +16,7 @@ const AboutUs = () => {
                             src={profilePicture}
                             alt='profile-img'
                             width='300'
-                            height='400'
+                            height='300'
                             loading='lazy'
                         />
                     </picture>

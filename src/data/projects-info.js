@@ -3,7 +3,7 @@ const projects = [
         id: 1,
         image: "/comments-pr.png",
         title: "Interactive comments section",
-        categories: ["React", "CSS"],
+        categories: ["React", "HTML & CSS"],
         description:
             "Frontend Mentor challenge - builind a CRUD comment section based on a data.json file.",
         liveUrl: "https://badiu-react-interactive-comments-app.netlify.app",
@@ -14,7 +14,7 @@ const projects = [
         id: 2,
         image: "/countries-pr.png",
         title: "REST Countries API with color theme switcher",
-        categories: ["React", "CSS", "API"],
+        categories: ["React", "HTML & CSS", "API"],
         description:
             "Frontend Mentor challenge - Fetch data, filter the result, search countries, see country details page, switch theme, use pagination",
         liveUrl: "https://badiu-react-countries-app.netlify.app",
@@ -24,7 +24,7 @@ const projects = [
         id: 3,
         image: "/todo-pr.png",
         title: "Todo app",
-        categories: ["Vue.js", "CSS"],
+        categories: ["Vue.js", "HTML & CSS"],
         description:
             "Frontend Mentor challenge - add, delete, filter the todos",
         liveUrl: "https://badiu-vue-to-do-app.netlify.app/",
@@ -34,7 +34,7 @@ const projects = [
         id: 4,
         image: "/game-pr.png",
         title: "Javascript Game",
-        categories: ["Vanilla Javascript", "CSS"],
+        categories: ["Vanilla Javascript", "HTML & CSS"],
         description: "Frontend Mentor - Rock, Paper, Scissors",
         liveUrl: "https://badiu-js-rock-paper-scissors-app.netlify.app",
         githubLink: "https://github.com/BadiuIoana/js-rock-paper-scissors-app",

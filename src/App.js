@@ -4,6 +4,7 @@ import Loader from "./UI/Loader";
 import NavBar from "./UI/NavBar";
 import AboutUs from "./UI/AboutUs";
 import Work from "./UI/Work";
+import TimelineResume from "./UI/TimelineResume";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
             <section>
                 <Work />
             </section>
+            <TimelineResume />
         </Fragment>
     );
 }
