@@ -19,7 +19,7 @@ const TimelineResume = () => {
                     </p>
                 </div>
             </div>
-            <div className='timeline'>
+            {/* <div className='timeline'>
                 <span className='vertical-line'></span>
                 <div className='experience-section'>
                     <div className='wrapper'>
@@ -68,6 +68,22 @@ const TimelineResume = () => {
                             </p>
                         </div>
                     </div>
+                </div>
+            </div> */}
+
+            <div className='timeline-section'>
+                <div className='left-part'>
+                    <span className='vertical-line'></span>
+                    <h2>2020</h2>
+                </div>
+                <div className='right-part'>
+                    <p className='emphasize'>Title for the job</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ab, sequi doloribus numquam at labore unde tempora
+                        eveniet. Tenetur, tempore blanditiis. Esse in, commodi
+                        possimus nostrum culpa neque illo harum delectus?
+                    </p>
                 </div>
             </div>
         </section>

@@ -7,7 +7,7 @@
 
             span.parallelogram {
                 position: absolute;
-                z-index: 3;
+                z-index: 13;
                 width: 4rem;
                 height: 2rem;
                 background: hsla(240, 3%, 94%, 0.8);
@@ -17,13 +17,13 @@
                 &.top {
                     top: 0rem;
                     left: 0rem;
-                    z-index: -1;
+                    z-index: 10;
                 }
             }
 
             span.dots {
                 position: absolute;
-                z-index: 3;
+                z-index: 13;
                 width: 4rem;
                 height: 2rem;
                 border-radius: 1rem;
@@ -35,7 +35,7 @@
                 &.top {
                     top: 0rem;
                     left: 0rem;
-                    z-index: -1;
+                    z-index: 10;
                 }
             }
 
@@ -46,7 +46,7 @@
                     &.top {
                         top: -1.3rem;
                         left: 0rem;
-                        z-index: -1;
+                        z-index: 10;
                     }
                 }
 
@@ -57,7 +57,7 @@
                     &.top {
                         top: 0rem;
                         left: 1.3rem;
-                        z-index: -1;
+                        z-index: 10;
                     }
                 }
             }
@@ -70,67 +70,166 @@
         }
     }
 
-    .timeline {
-        position: relative;
+    // .timeline {
+    //     position: relative;
 
-        .vertical-line {
+    //     .vertical-line {
+    //         position: absolute;
+    //         top: 0;
+    //         bottom: 0;
+    //         left: 50%;
+    //         width: 0.2rem;
+    //         transform: translateX(-50%);
+    //         background-color: red;
+    //         z-index: 1;
+    //     }
+
+    //     .experience-section {
+    //         position: relative;
+
+    //         &::after {
+    //             content: "";
+    //             width: 1rem;
+    //             height: 1rem;
+    //             position: absolute;
+    //             top: 50%;
+    //             left: 50%;
+    //             transform: translate(-50%, -50%);
+    //             background-color: red;
+    //             border-radius: 50%;
+    //         }
+
+    //         .wrapper {
+    //             min-height: 30rem;
+    //             display: grid;
+    //             grid-template-columns: 1fr 5rem 1fr;
+    //             align-items: center;
+    //             margin: 0 auto;
+    //             .left-part {
+    //                 text-align: right;
+    //                 grid-column: 1/2;
+    //             }
+
+    //             .right-part {
+    //                 text-align: center;
+    //                 grid-column: 3/4;
+    //             }
+    //         }
+    //         &:nth-of-type(1) {
+    //             background-image: linear-gradient(
+    //                     to right,
+    //                     rgba(0, 0, 0, 0.8),
+    //                     rgba(67, 67, 67, 0.8)
+    //                 ),
+    //                 url(../assets/vilnius.jpg) !important;
+    //             background-size: contain;
+    //             background-position: left;
+    //             background-repeat: no-repeat;
+    //         }
+    //         &:nth-of-type(2) {
+    //             background-color: lightcoral;
+    //         }
+    //         &:nth-of-type(3) {
+    //             background-color: lightcyan;
+    //         }
+    //     }
+    // }
+
+    .timeline-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 25rem;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: "";
             position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            width: 0.2rem;
-            transform: translateX(-50%);
-            background-color: red;
-            z-index: 1;
+            inset: 0;
+            background-image: linear-gradient(
+                to left,
+                rgba(0, 0, 0, 0.8),
+                rgba(67, 67, 67, 0.8)
+            );
+            z-index: 2;
         }
 
-        .experience-section {
+        .left-part {
+            background-image: url(../assets/vilnius.jpg) !important;
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: right;
             position: relative;
 
-            &::after {
-                content: "";
-                width: 1rem;
-                height: 1rem;
+            h2 {
+                margin-right: 4rem;
+                color: #fff;
+                font-size: 40px;
+                z-index: 3;
+            }
+
+            .vertical-line {
                 position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background-color: red;
-                border-radius: 50%;
-            }
+                top: 0;
+                bottom: 0;
+                height: 100%;
+                width: 3px;
+                background-color: #ffffff;
+                z-index: 3;
 
-            .wrapper {
-                min-height: 30rem;
-                display: grid;
-                grid-template-columns: 1fr 5rem 1fr;
-                align-items: center;
-                margin: 0 auto;
-                .left-part {
-                    text-align: right;
-                    grid-column: 1/2;
+                &::after {
+                    content: "";
+                    width: 1rem;
+                    height: 1rem;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: #ffffff;
+                    border-radius: 50%;
+                    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+                    animation: pulse 2s infinite;
                 }
+                @keyframes pulse {
+                    0% {
+                        transform: scale(0.95);
+                        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+                    }
 
-                .right-part {
-                    text-align: center;
-                    grid-column: 3/4;
+                    70% {
+                        transform: scale(1);
+                        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+                    }
+
+                    100% {
+                        transform: scale(0.95);
+                        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                    }
                 }
             }
-            &:nth-of-type(1) {
-                background-image: linear-gradient(
-                        to right,
-                        rgba(0, 0, 0, 0.8),
-                        rgba(67, 67, 67, 0.8)
-                    ),
-                    url(../assets/vilnius.jpg) !important;
-                background-size: contain;
-                background-position: left;
-                background-repeat: no-repeat;
+        }
+
+        .right-part {
+            height: 100%;
+            display: flex;
+            align-items: right;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 3;
+
+            p {
+                color: #ffffff;
+                text-align: left;
+                margin-left: 30px;
+                max-width: 30rem;
             }
-            &:nth-of-type(2) {
-                background-color: lightcoral;
-            }
-            &:nth-of-type(3) {
-                background-color: lightcyan;
+            p.emphasize {
+                font-weight: 700;
             }
         }
     }
