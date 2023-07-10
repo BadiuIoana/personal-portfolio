@@ -9,7 +9,7 @@
     gap: 2rem;
     position: relative;
     color: var(--almost-black);
-    z-index: -1;
+    z-index: 10;
 
     .content-wrapper {
         max-width: 30rem;
@@ -34,7 +34,7 @@
             margin: 0 3rem;
             img {
                 max-height: 800px;
-                z-index: 2;
+                z-index: 13;
                 max-width: 18rem;
                 border-radius: 0.7rem;
                 width: 100%;
@@ -42,7 +42,7 @@
 
             span.parallelogram {
                 position: absolute;
-                z-index: 3;
+                z-index: 14;
                 width: 4rem;
                 height: 2rem;
                 background: hsla(240, 3%, 94%, 0.8);
@@ -62,7 +62,7 @@
 
             span.dots {
                 position: absolute;
-                z-index: 3;
+                z-index: 13;
                 width: 4rem;
                 height: 2rem;
                 border-radius: 1rem;
@@ -126,6 +126,6 @@
         display: flex;
         flex-direction: row;
         gap: 2rem;
-        z-index: 1;
+        z-index: 12;
     }
 }
