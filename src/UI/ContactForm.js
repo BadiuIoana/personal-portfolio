@@ -1,24 +1,6 @@
 import "./_contact-form.scss";
 
 const ContactForm = () => {
-    const handleSubmit = (event) => {
-        event.preventDefault();
-
-        // do your verifications and checks
-        if (!verified) return false;
-
-        const REQUEST_PARAMETERS = {
-            method: `POST`,
-            headers: { "Content-Type": `application/x-www-form-urlencoded` },
-            body: encode({ ...data }), //your data here. Needs to have your form-name attribute set
-        };
-
-        fetch(`/`, REQUEST_PARAMETERS)
-            .then(() => {
-                console.log(`OK`);
-            })
-            .catch((error) => alert(error));
-    };
     return (
         <div className='wrapper contact-section'>
             {/* <form
@@ -49,7 +31,6 @@ const ContactForm = () => {
                 data-netlify='true'
                 data-netlify-honeypot='bot-field'
                 data-netlify-recaptcha='true'
-                action='/thank-you'
             >
                 <div className='form-group'>
                     <input
