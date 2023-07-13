@@ -1,4 +1,5 @@
 import "./_resume.scss";
+import Button from "./Button";
 
 const TimelineResume = () => {
     return (
@@ -81,6 +82,17 @@ const TimelineResume = () => {
                         </div>
                     </li>
                 </ul>
+                <div class='download-resume'>
+                    <p>
+                        You are interested to see more about me? Download the
+                        complete version of the resume in PDF.
+                    </p>
+                    <Button
+                        title='Download'
+                        link='../public/badiu-ioana-andreea-cv.pdf'
+                        download='true'
+                    />
+                </div>
             </div>
         </section>
     );
