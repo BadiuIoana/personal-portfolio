@@ -5,7 +5,6 @@ const ContactForm = () => {
         <div className='wrapper contact-section'>
             <form
                 className='contact-form'
-                action='/send-message'
                 method='POST'
                 data-netlify='true'
                 data-netlify-honeypot='bot-field'
