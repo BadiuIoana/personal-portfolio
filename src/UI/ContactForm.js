@@ -1,53 +1,50 @@
 import "./_contact-form.scss";
-
+import { useState } from "react";
+const encode = (data) => {
+    return Object.keys(data)
+        .map(
+            (key) =>
+                encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+        )
+        .join("&");
+};
 const ContactForm = () => {
+    const { name, setName } = useState("");
+    const { email, setEmail } = useState("");
+    const { message, setMessage } = useState("");
+    const handleSubmit = (e) => {
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({
+                "form-name": "contact",
+                ...{ name, email, message },
+            }),
+        })
+            .then(() => alert("Success!"))
+            .catch((error) => alert(error));
+
+        e.preventDefault();
+    };
+
     return (
         <div className='wrapper contact-section'>
-            {/* <form
-                className='contact-form'
-                method='POST'
-                netlify
-                data-netlify='true'
-                name='contact'
-            >
-                <div className='group'>
-                    <label htmlFor='company'>Company Name</label>
-                    <input type='text' name='company' />
-                </div>
-                <div className='group'>
-                    <label htmlFor='email'>Email Address</label>
-                    <input type='text' name='email' />
-                </div>
-                <div className='group'>
-                    <label htmlFor='message'>Message</label>
-                    <input type='text' name='message' />
-                </div>
-                <button type='submit'>Send</button>
-            </form> */}
-
-            <form name='contact' method='POST' data-netlify='true'>
+            <form onSubmit={handleSubmit}>
                 <p>
                     <label>
-                        Your Name: <input type='text' name='name' />
+                        Your Name:{" "}
+                        <input type='text' name='name' value={name} />
                     </label>
                 </p>
                 <p>
                     <label>
-                        Your Email: <input type='email' name='email' />
+                        Your Email:{" "}
+                        <input type='email' name='email' value={email} />
                     </label>
                 </p>
                 <p>
                     <label>
-                        Your Role:{" "}
-                        <select name='role[]' multiple>
-                            <option value='leader'>Leader</option>
-                            <option value='follower'>Follower</option>
-                        </select>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        Message: <textarea name='message'></textarea>
+                        Message: <textarea name='message' value={message} />
                     </label>
                 </p>
                 <p>
