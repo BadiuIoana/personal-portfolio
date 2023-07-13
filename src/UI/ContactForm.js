@@ -30,7 +30,12 @@ const ContactForm = () => {
 
     return (
         <div className='wrapper contact-section'>
-            <form onSubmit={handleSubmit}>
+            <form
+                onSubmit={handleSubmit}
+                name='contact'
+                method='POST'
+                data-netlify='true'
+            >
                 <p>
                     <label>
                         Your Name:{" "}
