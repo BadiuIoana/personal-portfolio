@@ -25,8 +25,14 @@ const ContactForm = () => {
                 <button type='submit'>Send</button>
             </form> */}
 
-            <form name='contact' method='POST' data-netlify='true'>
-                <input type='hidden' name='form-name' value='contact' />
+            <form
+                name='contact'
+                method='POST'
+                data-netlify='true'
+                data-netlify-honeypot='bot-field'
+                data-netlify-recaptcha='true'
+                action='/thank-you'
+            >
                 <p>
                     <label>
                         Your Name: <input type='text' name='name' />
