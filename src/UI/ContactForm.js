@@ -53,11 +53,7 @@ const ContactForm = () => {
                     ></textarea>
                     <div data-netlify-recaptcha='true'></div>
                 </div>
-                <button
-                    type='submit'
-                    className='submit-btn btn'
-                    onClick={handleSubmit}
-                >
+                <button type='submit' className='submit-btn btn'>
                     send me your message
                 </button>
             </form>
