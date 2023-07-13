@@ -89,7 +89,7 @@ const TimelineResume = () => {
                     </p>
                     <Button
                         title='Download'
-                        link='../public/badiu-ioana-andreea-cv.pdf'
+                        link='/badiu-ioana-andreea-cv.pdf'
                         download='true'
                     />
                 </div>
