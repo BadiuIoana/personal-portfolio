@@ -9,10 +9,11 @@ const encode = (data) => {
         .join("&");
 };
 const ContactForm = () => {
-    const { name, setName } = useState("");
-    const { email, setEmail } = useState("");
-    const { message, setMessage } = useState("");
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
     const handleSubmit = (e) => {
+        console.log(name, email, message);
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -33,18 +34,33 @@ const ContactForm = () => {
                 <p>
                     <label>
                         Your Name:{" "}
-                        <input type='text' name='name' value={name} />
+                        <input
+                            type='text'
+                            name='name'
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                        />
                     </label>
                 </p>
                 <p>
                     <label>
                         Your Email:{" "}
-                        <input type='email' name='email' value={email} />
+                        <input
+                            type='email'
+                            name='email'
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
                     </label>
                 </p>
                 <p>
                     <label>
-                        Message: <textarea name='message' value={message} />
+                        Message:{" "}
+                        <textarea
+                            name='message'
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+                        />
                     </label>
                 </p>
                 <p>
