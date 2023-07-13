@@ -1,6 +1,24 @@
 import "./_contact-form.scss";
 
 const ContactForm = () => {
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        // do your verifications and checks
+        if (!verified) return false;
+
+        const REQUEST_PARAMETERS = {
+            method: `POST`,
+            headers: { "Content-Type": `application/x-www-form-urlencoded` },
+            body: encode({ ...data }), //your data here. Needs to have your form-name attribute set
+        };
+
+        fetch(`/`, REQUEST_PARAMETERS)
+            .then(() => {
+                console.log(`OK`);
+            })
+            .catch((error) => alert(error));
+    };
     return (
         <div className='wrapper contact-section'>
             {/* <form
@@ -26,40 +44,41 @@ const ContactForm = () => {
             </form> */}
 
             <form
-                name='contact'
+                name='Portfolio_Contact'
                 method='POST'
                 data-netlify='true'
                 data-netlify-honeypot='bot-field'
                 data-netlify-recaptcha='true'
                 action='/thank-you'
             >
-                <p>
-                    <label>
-                        Your Name: <input type='text' name='name' />
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        Your Email: <input type='email' name='email' />
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        Your Role:{" "}
-                        <select name='role[]' multiple>
-                            <option value='leader'>Leader</option>
-                            <option value='follower'>Follower</option>
-                        </select>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        Message: <textarea name='message'></textarea>
-                    </label>
-                </p>
-                <p>
-                    <button type='submit'>Send</button>
-                </p>
+                <div className='form-group'>
+                    <input
+                        type='text'
+                        name='name'
+                        placeholder='name'
+                        className='form-control'
+                    />
+                    <input
+                        type='email'
+                        placeholder='email'
+                        name='email'
+                        className='form-control'
+                    />
+                    <textarea
+                        name='message'
+                        rows='5'
+                        placeholder='message'
+                        className='form-control'
+                    ></textarea>
+                    <div data-netlify-recaptcha='true'></div>
+                </div>
+                <button
+                    type='submit'
+                    className='submit-btn btn'
+                    onClick={handleSubmit}
+                >
+                    send me your message
+                </button>
             </form>
         </div>
     );
