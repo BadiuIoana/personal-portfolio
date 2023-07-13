@@ -8,9 +8,8 @@ const ContactForm = () => {
                 method='POST'
                 netlify
                 data-netlify='true'
-                data-netlify-honeypot='bot-field'
+                name='contact'
             >
-                <input name='bot-field' className='hidden' />
                 <div className='group'>
                     <label htmlFor='company'>Company Name</label>
                     <input type='text' name='company' />
@@ -23,8 +22,7 @@ const ContactForm = () => {
                     <label htmlFor='message'>Message</label>
                     <input type='text' name='message' />
                 </div>
-
-                <button type='submit'>Send message</button>
+                <button type='submit'>Send</button>
             </form>
         </div>
     );
