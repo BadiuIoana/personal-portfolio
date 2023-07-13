@@ -3,7 +3,11 @@ import "./_button.scss";
 const Button = (props) => {
     return (
         <button type='button'>
-            <a className='fancy' href={props.link} download>
+            <a
+                className='fancy'
+                href={props.link}
+                download={props.download ? "true" : null}
+            >
                 <span className='top-key'></span>
                 <span className='text'>{props.title}</span>
                 <span className='bottom-key-1'></span>
