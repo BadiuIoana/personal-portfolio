@@ -12,8 +12,7 @@ const ContactForm = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-    const handleSubmit = (e) => {
-        console.log(name, email, message);
+    const handleSubmit = async (e) => {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -30,42 +29,23 @@ const ContactForm = () => {
 
     return (
         <div className='wrapper contact-section'>
-            <form
-                onSubmit={handleSubmit}
-                name='contact'
-                method='POST'
-                data-netlify='true'
-            >
+            <form name='contact' method='POST' data-netlify='true'>
+                <input type='hidden' name='form-name' value='contact' />
                 <p>
                     <label>
                         Your Name:{" "}
-                        <input
-                            type='text'
-                            name='name'
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                        />
+                        <input type='text' name='name' value={name} />
                     </label>
                 </p>
                 <p>
                     <label>
                         Your Email:{" "}
-                        <input
-                            type='email'
-                            name='email'
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
+                        <input type='email' name='email' value={email} />
                     </label>
                 </p>
                 <p>
                     <label>
-                        Message:{" "}
-                        <textarea
-                            name='message'
-                            value={message}
-                            onChange={(e) => setMessage(e.target.value)}
-                        />
+                        Message: <textarea name='message' value={message} />
                     </label>
                 </p>
                 <p>
