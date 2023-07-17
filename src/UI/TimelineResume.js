@@ -84,7 +84,7 @@ const TimelineResume = () => {
                 </ul>
                 <div class='download-resume'>
                     <p>
-                        You are interested to see more about me? Download the
+                        Are you interested to see more about me? Download the
                         complete version of the resume in PDF.
                     </p>
                     <Button
