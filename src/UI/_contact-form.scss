@@ -18,7 +18,7 @@
         letter-spacing: 3px;
         font-size: 15px;
         color: #000;
-        background-color: #ece5ceab;
+        background-color: #fffefcab;
         padding: 1rem;
         border-radius: 11px;
         position: relative;
@@ -126,17 +126,17 @@
         p.speech-text {
             transform: rgb(40, 31, 32) latey(0px);
             animation: float 5s ease-in-out infinite;
-
             text-align: center;
             font-weight: bold;
             font-size: 15px;
             color: #000;
-            background-color: #ece5ceab;
-            padding: 50px;
+            background-color: #fffefcab;
+            padding: 2rem;
             border-radius: 11px;
             position: relative;
             box-shadow: 20px 20px var(--intel-blue-pale);
         }
+
         p.speech-text:after {
             transform: translatey(0px);
             animation: float2 5s ease-in-out infinite;

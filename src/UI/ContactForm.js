@@ -16,6 +16,7 @@ const ContactForm = () => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
     const handleSubmit = async (e) => {
+        console.log(name, email, message);
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -46,14 +47,18 @@ const ContactForm = () => {
                         <img
                             src={avatarImg}
                             alt='avatar image'
-                            width='100'
-                            height='100'
+                            width='200'
+                            height='200'
                         />
                     </div>
 
                     <div className='section'>
                         <h2>Contact me</h2>
-                        <form name='contact' method='post'>
+                        <form
+                            name='contact'
+                            method='post'
+                            onSubmit={handleSubmit}
+                        >
                             <input
                                 type='hidden'
                                 name='form-name'
@@ -61,11 +66,19 @@ const ContactForm = () => {
                             />
                             <div>
                                 <label htmlFor='name'>Full Name</label>
-                                <input type='text' name='name' />
+                                <input
+                                    type='text'
+                                    name='name'
+                                    onChange={(e) => setName(e.target.value)}
+                                />
                             </div>
                             <div>
                                 <label htmlFor='name'>Your Email</label>
-                                <input type='email' name='email' />
+                                <input
+                                    type='email'
+                                    name='email'
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
                             </div>
                             <div>
                                 <label htmlFor='name'>Message</label>
@@ -73,6 +86,7 @@ const ContactForm = () => {
                                     type='text'
                                     name='message'
                                     rows='4'
+                                    onChange={(e) => setMessage(e.target.value)}
                                 ></textarea>
                             </div>
                             <button type='submit'>
