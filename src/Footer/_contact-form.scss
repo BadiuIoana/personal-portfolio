@@ -1,0 +1,109 @@
+form {
+    max-height: 50%;
+    min-width: 20rem;
+
+    .group {
+        margin: 1rem 0;
+    }
+
+    button {
+        font-family: inherit;
+        font-size: 18px;
+        font-weight: bold;
+        color: #000;
+        background-color: var(--intel-blue-pale);
+        padding: 0.5rem 1.5rem;
+        display: flex;
+        align-items: center;
+        border-radius: 14px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s;
+        min-width: unset;
+    }
+
+    button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    button:active {
+        transform: scale(0.95);
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    button span {
+        display: block;
+        margin-left: 0.4em;
+        transition: all 0.3s;
+    }
+
+    button svg {
+        width: 18px;
+        height: 18px;
+        fill: #000;
+        transition: all 0.3s;
+    }
+
+    button .svg-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.2);
+        border: solid 1px #000000;
+        margin-right: 0.5em;
+        transition: all 0.3s;
+    }
+
+    button:hover .svg-wrapper {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    button:hover svg {
+        transform: rotate(45deg);
+    }
+
+    .input {
+        position: relative;
+        &__label {
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: calc(0.5rem * 0.75) calc(0.5rem * 0.5);
+            margin: calc(0.5rem * 0.75 + 3px) calc(0.5rem * 0.5);
+            background: pink;
+            white-space: nowrap;
+            transform: translate(0, 0);
+            transform-origin: 0 0;
+            background: white;
+            transition: transform 120ms ease-in;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+        &__field {
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            border: 3px solid currentColor;
+            padding: calc(0.5rem * 1.5) 0.5rem;
+            color: currentColor;
+            background: transparent;
+            border-radius: 4px;
+
+            &:focus,
+            &:not(:placeholder-shown) {
+                & + .input__label {
+                    transform: translate(0.25rem, -65%) scale(0.8);
+                    color: var(--azure);
+                }
+            }
+        }
+        .error {
+            color: salmon;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+    }
+}

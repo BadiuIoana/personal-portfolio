@@ -1,0 +1,22 @@
+.contact-section {
+    background-image: url(../assets/layered-waves-haikei.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 66%;
+    background-position-y: 24%;
+    min-height: 32rem;
+    display: flex;
+    align-items: end;
+
+    .two-cols {
+        display: block;
+    }
+
+    @media (min-width: 768px) {
+        .two-cols {
+            display: grid;
+            gap: 4rem;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

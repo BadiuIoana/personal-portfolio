@@ -4,12 +4,12 @@ import NavBar from "./UI/NavBar";
 import AboutUs from "./UI/AboutUs";
 import Work from "./UI/Work";
 import TimelineResume from "./UI/TimelineResume";
-import ContactForm from "./UI/ContactForm";
+import FooterSection from "./Footer/FooterSection";
+import Modal from "./UI/Modal/Modal";
 
 function App() {
     return (
         <Fragment>
-            {/* <Loader /> */}
             <header>
                 <NavBar />
                 <AboutUs />
@@ -18,7 +18,8 @@ function App() {
                 <Work />
             </section>
             <TimelineResume />
-            <ContactForm />
+            <FooterSection />
+            <Modal />
         </Fragment>
     );
 }
