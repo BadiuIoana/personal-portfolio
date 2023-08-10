@@ -2,9 +2,13 @@ import "./_about-us.scss";
 import profilePicture from "../assets/picture-profile.png";
 import profilePictureWebp from "../assets/profile.jpg";
 import Button from "./Button";
-const AboutUs = () => {
+const AboutMe = (props) => {
     return (
-        <section className='about-us-section'>
+        <section
+            className='about-us-section'
+            id='about-me'
+            ref={props.locationInPage}
+        >
             <div className='profile-picture-section'>
                 <div className='image-wrapper'>
                     <span className='parallelogram top'></span>
@@ -45,4 +49,4 @@ const AboutUs = () => {
     );
 };
 
-export default AboutUs;
+export default AboutMe;

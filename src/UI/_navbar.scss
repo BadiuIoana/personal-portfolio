@@ -41,14 +41,13 @@
                 list-style: none;
                 padding: 0.75rem 0;
 
-                a {
-                    text-decoration: none;
-                    color: #ffffff;
-                    font-size: 18px;
-                    opacity: 0;
-                    font-weight: 700;
-                    transition: opacity 150ms ease-in-out;
-                }
+                text-decoration: none;
+                color: #ffffff;
+                font-size: 18px;
+                opacity: 0;
+                font-weight: 700;
+                transition: opacity 150ms ease-in-out;
+                cursor: pointer;
             }
         }
 
@@ -79,9 +78,11 @@
     .nav-toggle:checked ~ nav {
         transform: scale(1, 1);
 
-        a {
-            opacity: 1;
-            transition: opacity 250ms ease-in-out 250ms;
+        ul {
+            li {
+                opacity: 1;
+                transition: opacity 250ms ease-in-out 250ms;
+            }
         }
     }
 
@@ -171,10 +172,8 @@
                 justify-content: flex-end;
 
                 li {
-                    a {
-                        opacity: 1;
-                        color: var(--almost-black);
-                    }
+                    opacity: 1;
+                    color: var(--almost-black);
                 }
             }
 

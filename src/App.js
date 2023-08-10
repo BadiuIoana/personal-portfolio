@@ -1,25 +1,32 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import "./App.scss";
 import NavBar from "./UI/NavBar";
-import AboutUs from "./UI/AboutUs";
+import AboutMe from "./UI/AboutMe";
 import Work from "./UI/Work";
 import TimelineResume from "./UI/TimelineResume";
 import FooterSection from "./Footer/FooterSection";
-import Modal from "./UI/Modal/Modal";
-
+import { useState } from "react";
 function App() {
+    const [locationInPage, setLocationInPage] = useState(null);
+    useEffect(() => {
+        window.scrollTo({
+            top:
+                document.getElementById(locationInPage)?.getBoundingClientRect()
+                    .top +
+                window.scrollY -
+                document.querySelector(".nav-wrapper").getBoundingClientRect()
+                    .height,
+            behavior: "smooth",
+        });
+    }, [locationInPage]);
+
     return (
         <Fragment>
-            <header>
-                <NavBar />
-                <AboutUs />
-            </header>
-            <section>
-                <Work />
-            </section>
+            <NavBar setLocationInPage={setLocationInPage} />
+            <AboutMe setLocationInPage={setLocationInPage} />
+            <Work />
             <TimelineResume />
             <FooterSection />
-            <Modal />
         </Fragment>
     );
 }

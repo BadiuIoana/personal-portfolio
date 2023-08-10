@@ -1,7 +1,7 @@
 import "./_resume.scss";
 import Button from "./Button";
 
-const TimelineResume = () => {
+const TimelineResume = (props) => {
     return (
         <section className='resume-section' id='resume'>
             <div className='wrapper'>
@@ -20,14 +20,14 @@ const TimelineResume = () => {
                         external projects in diverse industries.
                     </p>
                 </div>
-                <ul class='timeline'>
-                    <li class='timeline-event'>
+                <ul className='timeline'>
+                    <li className='timeline-event'>
                         <div className='timeline-event-icon'>
-                            <label class='icon'></label>
+                            <label className='icon'></label>
                         </div>
 
-                        <div class='timeline-event-content'>
-                            <p class='timeline-event-thumbnail'>
+                        <div className='timeline-event-content'>
+                            <p className='timeline-event-thumbnail'>
                                 September 2019 - Present
                             </p>
                             <h3>Roweb Development</h3>
@@ -46,10 +46,10 @@ const TimelineResume = () => {
                             </p>
                         </div>
                     </li>
-                    <li class='timeline-event'>
-                        <label class='timeline-event-icon'></label>
-                        <div class='timeline-event-content'>
-                            <p class='timeline-event-thumbnail'>
+                    <li className='timeline-event'>
+                        <label className='timeline-event-icon'></label>
+                        <div className='timeline-event-content'>
+                            <p className='timeline-event-thumbnail'>
                                 October 2017 - July 2020
                             </p>
                             <h3>Universitatea din Pitesti</h3>
@@ -68,10 +68,10 @@ const TimelineResume = () => {
                             </p>
                         </div>
                     </li>
-                    <li class='timeline-event'>
-                        <label class='timeline-event-icon'></label>
-                        <div class='timeline-event-content'>
-                            <p class='timeline-event-thumbnail'>
+                    <li className='timeline-event'>
+                        <label className='timeline-event-icon'></label>
+                        <div className='timeline-event-content'>
+                            <p className='timeline-event-thumbnail'>
                                 August 2018 - February 2019
                             </p>
                             <h3>Vilnius University</h3>
@@ -82,7 +82,7 @@ const TimelineResume = () => {
                         </div>
                     </li>
                 </ul>
-                <div class='download-resume'>
+                <div className='download-resume'>
                     <p>
                         Are you interested to see more about me? Download the
                         complete version of the resume in PDF.
@@ -90,7 +90,7 @@ const TimelineResume = () => {
                     <Button
                         title='Download'
                         link='/badiu-ioana-andreea-cv.pdf'
-                        download='true'
+                        download
                     />
                 </div>
             </div>

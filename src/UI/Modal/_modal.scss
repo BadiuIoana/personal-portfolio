@@ -11,24 +11,59 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 101;
+    width: 100%;
+    max-width: 320px;
+
+    .modal-body {
+        position: relative;
+        background: #ffffff;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 2px 2px 2px #ddd;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+        font-size: 1.5rem;
+        width: 1rem;
+        min-width: auto;
+        font-weight: bold;
+        color: #424a5d;
+    }
+
+    .message {
+        display: block;
+
+        p {
+            font-weight: bold;
+            font-size: 15px;
+            color: #424a5d;
+
+            .strong {
+                font-size: 18px;
+            }
+        }
+
+        img {
+            margin: 0 auto;
+        }
+    }
 }
 
-.modal-body {
-    position: relative;
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 2px 2px 2px #ddd;
-}
+@media screen and (min-width: 768px) {
+    .modal {
+        width: 25rem;
+        max-width: unset;
+    }
 
-.modal .close-btn {
-    position: absolute;
-    top: 0;
-    right: 1rem;
-    cursor: pointer;
-    border: none;
-    background: transparent;
-    font-size: 1.5rem;
-    width: 1rem;
-    min-width: auto;
+    .modal .message {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
 }

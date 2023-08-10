@@ -1,6 +1,6 @@
 import "./_contact-form.scss";
 import { Fragment, useState } from "react";
-
+import checkedIcon from "../assets/checked.png";
 const encode = (data) => {
     return Object.keys(data)
         .map(
@@ -122,7 +122,20 @@ const ContactForm = () => {
     return (
         <Fragment>
             {showMessageAfterSubmit && (
-                <div class='message'> Thank you for contacting us!</div>
+                <div className='message'>
+                    <img
+                        src={checkedIcon}
+                        alt='checked-icon'
+                        width='50'
+                        height='50'
+                    />
+                    <p>
+                        <span className='strong'>Thank you</span> for your
+                        message!
+                        <br /> I will reach out to you{" "}
+                        <span className='strong'>as soon as possible</span> .
+                    </p>
+                </div>
             )}
             {!showMessageAfterSubmit && (
                 <form name='contact' method='post' onSubmit={handleSubmit}>

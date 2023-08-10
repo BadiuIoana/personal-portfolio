@@ -2,21 +2,57 @@ import "./_navbar.scss";
 import githubIcon from "../assets/github-icon.svg";
 import linkedinIcon from "../assets/linkedin-icon.svg";
 
-const NavBar = () => {
+const NavBar = (props) => {
     return (
         <div className='nav-wrapper'>
             <h1 className='text-emphasize'>{`<ioana-badiu />`}</h1>
             <input type='checkbox' id='nav-toggle' className='nav-toggle' />
             <nav>
                 <ul>
-                    <li>
-                        <a href='#work'>{"#work"}</a>
+                    <li
+                        onClick={(e) => {
+                            props.setLocationInPage(
+                                e.target.getAttribute("data-description")
+                            );
+                        }}
+                        className='menu-item'
+                        data-description='about-me'
+                    >
+                        {"#about-me"}
                     </li>
-                    <li>
-                        <a href='#resume'>{"#resume"}</a>
+                    <li
+                        onClick={(e) => {
+                            props.setLocationInPage(
+                                e.target.getAttribute("data-description")
+                            );
+                        }}
+                        className='menu-item'
+                        data-description='work'
+                    >
+                        {"#work"}
                     </li>
-                    <li>
-                        <a href='#contact'>{"#contact"}</a>
+                    <li
+                        onClick={(e) =>
+                            props.setLocationInPage(
+                                e.target.getAttribute("data-description")
+                            )
+                        }
+                        className='menu-item'
+                        data-description='resume'
+                    >
+                        {"#resume"}
+                    </li>
+
+                    <li
+                        onClick={(e) =>
+                            props.setLocationInPage(
+                                e.target.getAttribute("data-description")
+                            )
+                        }
+                        className='menu-item'
+                        data-description='contact'
+                    >
+                        {"#contact"}
                     </li>
                 </ul>
                 <div className='social-icons'>

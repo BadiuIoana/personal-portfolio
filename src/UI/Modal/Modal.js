@@ -1,17 +1,27 @@
 import "./_modal.scss";
 import { Fragment } from "react";
 import ContactForm from "../../Footer/ContactForm";
-const Modal = () => {
-    return (
+import ReactDOM from "react-dom";
+const Modal = (props) => {
+    return ReactDOM.createPortal(
         <Fragment>
-            <div className='overlay'></div>
+            <div
+                className='overlay'
+                onClick={props.toggleModalVisibility}
+            ></div>
             <div className='modal'>
                 <div className='modal-body'>
                     <ContactForm />
                 </div>
-                <button className='close-btn'>x</button>
+                <button
+                    className='close-btn'
+                    onClick={props.toggleModalVisibility}
+                >
+                    &times;
+                </button>
             </div>
-        </Fragment>
+        </Fragment>,
+        document.getElementById("modal")
     );
 };
 

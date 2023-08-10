@@ -1,7 +1,4 @@
 form {
-    max-height: 50%;
-    min-width: 20rem;
-
     .group {
         margin: 1rem 0;
     }
@@ -11,8 +8,8 @@ form {
         font-size: 18px;
         font-weight: bold;
         color: #000;
-        background-color: var(--intel-blue-pale);
-        padding: 0.5rem 1.5rem;
+        background-image: linear-gradient(-100deg, #6190e8, #a7bfe8);
+        padding: 0.5rem 1.5rem 0.5rem 1rem;
         display: flex;
         align-items: center;
         border-radius: 14px;
@@ -86,7 +83,7 @@ form {
             box-sizing: border-box;
             display: block;
             width: 100%;
-            border: 3px solid currentColor;
+            border: 1px solid currentColor;
             padding: calc(0.5rem * 1.5) 0.5rem;
             color: currentColor;
             background: transparent;
@@ -100,9 +97,11 @@ form {
                 }
             }
         }
+
         .error {
-            color: salmon;
+            color: rgb(139, 27, 15);
             font-weight: bold;
+            font-size: 0.9em;
             line-height: 1.2;
         }
     }
