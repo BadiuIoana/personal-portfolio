@@ -133,14 +133,15 @@
     }
 
     .timeline-event-content {
-        padding: 2em;
+        padding: 0 2rem;
         position: relative;
-        top: -2.3em;
+        top: -0.3em;
         left: 2em;
         width: 80%;
 
         h3 {
             font-size: 1.75em;
+            margin: 0;
         }
 
         h4 {

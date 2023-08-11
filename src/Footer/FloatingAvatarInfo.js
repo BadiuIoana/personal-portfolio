@@ -5,8 +5,8 @@ const FooterSection = () => {
     return (
         <div className='section'>
             <p className='speech-text'>
-                Don't add me in '.gitignore'! &#128513; Perhaps we can be part
-                together of a great team and provide creative and usefull
+                Don't add me in '.gitignore'!&#128522; Perhaps we can be part
+                together of a great team and provide creative and useful
                 solutions for project requirements.
                 <br /> Let's have a chat!
             </p>

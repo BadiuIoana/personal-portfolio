@@ -5,9 +5,10 @@ const Button = (props) => {
         <button type='button' onClick={props.onClick}>
             <a
                 className='fancy'
-                href={props.link}
+                href={props.link ? props.link : null}
                 download={props.download}
                 id={props.id}
+                target={props.target}
             >
                 <span className='top-key'></span>
                 <span className='text'>{props.title}</span>

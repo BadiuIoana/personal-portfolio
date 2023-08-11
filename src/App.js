@@ -1,4 +1,4 @@
-import { Fragment, useEffect } from "react";
+import { Fragment } from "react";
 import "./App.scss";
 import NavBar from "./UI/NavBar";
 import AboutMe from "./UI/AboutMe";
@@ -7,25 +7,23 @@ import TimelineResume from "./UI/TimelineResume";
 import FooterSection from "./Footer/FooterSection";
 import { useState } from "react";
 function App() {
-    const [locationInPage, setLocationInPage] = useState(null);
-    useEffect(() => {
+    const scrollTo = (location) => {
         window.scrollTo({
             top:
-                document.getElementById(locationInPage)?.getBoundingClientRect()
-                    .top +
+                document.getElementById(location)?.getBoundingClientRect().top +
                 window.scrollY -
                 document.querySelector(".nav-wrapper").getBoundingClientRect()
                     .height,
             behavior: "smooth",
         });
-    }, [locationInPage]);
+    };
 
     return (
         <Fragment>
-            <NavBar setLocationInPage={setLocationInPage} />
-            <AboutMe setLocationInPage={setLocationInPage} />
-            <Work />
+            <NavBar scrollTo={scrollTo} />
+            <AboutMe scrollTo={scrollTo} />
             <TimelineResume />
+            <Work />
             <FooterSection />
         </Fragment>
     );

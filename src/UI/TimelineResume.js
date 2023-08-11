@@ -11,14 +11,7 @@ const TimelineResume = (props) => {
                         <span className='dots top'></span>
                         <h2>Resume</h2>
                     </div>
-                    <p>
-                        Three years ago, I started working as a full-time web
-                        programmer, thanks to a PHP internship. Throughout my
-                        career journey, I have practiced with technologies like
-                        PHP, Javascript, CSS, and MySQL. Moreover, I have
-                        brought my contribution to providing solutions for
-                        external projects in diverse industries.
-                    </p>
+                    <p>My professional growth in a nutshell:</p>
                 </div>
                 <ul className='timeline'>
                     <li className='timeline-event'>
@@ -43,6 +36,8 @@ const TimelineResume = (props) => {
                                 <br />
                                 Develop functionality for various specifications
                                 using PHP;
+                                <br />
+                                [...]
                             </p>
                         </div>
                     </li>
@@ -84,8 +79,8 @@ const TimelineResume = (props) => {
                 </ul>
                 <div className='download-resume'>
                     <p>
-                        Are you interested to see more about me? Download the
-                        complete version of the resume in PDF.
+                        Are you interested to know more about me?
+                        <br /> Download the complete version of the PDF resume.
                     </p>
                     <Button
                         title='Download'

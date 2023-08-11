@@ -17,8 +17,16 @@ const CardProject = (props) => {
                 </p>
             </div>
             <div className='button-wrapper'>
-                <Button title='Preview' link={props.project.liveUrl} />
-                <Button title='Github' link={props.project.githubLink} />
+                <Button
+                    title='Demo'
+                    link={props.project.liveUrl}
+                    target='_blank'
+                />
+                <Button
+                    title='Github'
+                    link={props.project.githubLink}
+                    target='_blank'
+                />
             </div>
         </div>
     );
