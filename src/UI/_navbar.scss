@@ -2,7 +2,7 @@
     max-width: 1400px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 1rem;
     position: fixed;
     margin: 0 auto;
@@ -154,6 +154,7 @@
     @media screen and (min-width: 800px) {
         padding: 0 1rem;
         transform-origin: top;
+        justify-content: space-around;
         .nav-toggle-label {
             display: none;
         }

@@ -19,8 +19,8 @@ const AboutMe = (props) => {
                         <img
                             src={profilePicture}
                             alt='profile-img'
-                            width='300'
-                            height='300'
+                            width='280'
+                            height='280'
                             loading='lazy'
                         />
                     </picture>
@@ -41,8 +41,10 @@ const AboutMe = (props) => {
                     knowledge regarding frontend technologies. I've been working
                     with projects in{" "}
                     <b>
-                        different industries, such as real estate, law and
-                        marketing
+                        different industries, such as{" "}
+                        <span className='highlighted'>
+                            real estate, law and marketing
+                        </span>
                     </b>
                     .
                 </p>
@@ -50,21 +52,16 @@ const AboutMe = (props) => {
                     I work especially as a frontend developer, but I understand
                     and practice the backend when needed.
                 </p>
-                <p>
-                    From my working experience, I'm proficient in using
-                    different programming languages and tools:{" "}
-                    <b>
-                        HTML, CSS (Bootstrap), SCSS, JS(JQuery, Vue.js), PHP
-                        (Laravel, Lumen), MySQL
-                    </b>
-                    .
-                </p>
+
                 <p>
                     <b>
                         I've learned React using courses and practical
-                        challenges for developing client-side apps. I'm really
-                        interested to work in the future with React or any other
-                        JavaScript framework.
+                        challenges for developing client-side apps.{" "}
+                        <span className='highlighted'>
+                            {" "}
+                            I'm really interested to work in the future with
+                            React or any other JavaScript framework.
+                        </span>
                     </b>
                 </p>
                 <p>

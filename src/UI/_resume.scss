@@ -1,69 +1,9 @@
 .resume-section {
     .title-description {
-        .title {
-            position: relative;
-            max-width: 8rem;
-            margin: 0 auto;
-
-            span.parallelogram {
-                position: absolute;
-                z-index: -1;
-                width: 4rem;
-                height: 2rem;
-                background: hsla(240, 3%, 94%, 0.8);
-                border-radius: 1rem;
-                transform: skew(-20deg);
-
-                &.top {
-                    top: 0rem;
-                    left: 0rem;
-                }
-            }
-
-            span.dots {
-                position: absolute;
-                width: 4rem;
-                height: 2rem;
-                border-radius: 1rem;
-                transform: skew(-20deg);
-                background-image: radial-gradient(#6190e8 1.5px, transparent 0);
-                background-size: 0.5rem 0.5rem;
-                background-position: -19px -19px;
-
-                &.top {
-                    top: 0rem;
-                    left: 0rem;
-                }
-            }
-
-            @media (min-width: 1190px) {
-                span.parallelogram {
-                    width: 7rem;
-                    height: 4rem;
-                    z-index: -5;
-                    &.top {
-                        top: -1.3rem;
-                        left: 0rem;
-                    }
-                }
-
-                span.dots {
-                    width: 7rem;
-                    height: 4rem;
-                    z-index: -6;
-
-                    &.top {
-                        top: 0rem;
-                        left: 1.3rem;
-                    }
-                }
-            }
-        }
-
         p {
             max-width: 50rem;
             text-align: center;
-            margin: 3rem auto 2rem auto;
+            margin: 0rem auto 1rem auto;
         }
     }
 

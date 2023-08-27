@@ -29,16 +29,42 @@ p {
 
 .wrapper {
     max-width: 75rem;
-    margin: 1rem auto;
-    padding: 1.3rem;
+    margin: 0 auto;
+    padding: 2rem 1.3rem;
 }
 
 h2 {
     font-size: 2em;
     text-align: center;
     line-height: 1em;
+    margin: 0 auto 2rem auto;
 }
 
 .hidden {
     display: none;
+}
+
+.animated-section {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@for $i from 1 through 11 {
+    .logo:nth-child(#{$i}) {
+        transition-delay: $i * 100;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .animated-section {
+        transition: none;
+    }
 }

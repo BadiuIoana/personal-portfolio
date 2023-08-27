@@ -16,12 +16,12 @@
         }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 600px) {
         .cards-wrapper {
             grid-template-columns: repeat(2, 1fr);
         }
     }
-    @media (min-width: 1280px) {
+    @media (min-width: 1000px) {
         .cards-wrapper {
             grid-template-columns: repeat(3, 1fr);
             gap: 3rem;

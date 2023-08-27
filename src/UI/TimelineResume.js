@@ -1,17 +1,12 @@
 import "./_resume.scss";
 import Button from "./Button";
 
-const TimelineResume = (props) => {
+const TimelineResume = () => {
     return (
-        <section className='resume-section' id='resume'>
+        <section className='resume-section animated-section' id='resume'>
             <div className='wrapper'>
                 <div className='title-description'>
-                    <div className='title'>
-                        <span className='parallelogram top'></span>
-                        <span className='dots top'></span>
-                        <h2>Resume</h2>
-                    </div>
-                    <p>My professional growth in a nutshell:</p>
+                    <h2>My professional growth in a nutshell</h2>
                 </div>
                 <ul className='timeline'>
                     <li className='timeline-event'>

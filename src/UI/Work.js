@@ -4,7 +4,7 @@ import CardProject from "./CardProject";
 
 const Work = () => {
     return (
-        <div className='work-section' id='work'>
+        <div className='work-section animated-section' id='work'>
             <div className='wrapper'>
                 <h2>Projects</h2>
                 <p className='description'></p>
