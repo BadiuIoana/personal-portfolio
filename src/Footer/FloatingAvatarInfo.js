@@ -5,10 +5,10 @@ const FooterSection = () => {
     return (
         <div className='section'>
             <p className='speech-text'>
-                Don't add me in '.gitignore'!&#128522; Perhaps we can be part
-                together of a great team and provide creative and useful
-                solutions for project requirements.
-                <br /> Let's have a chat!
+                Don't add me to the '.gitignore' file!&#128522; Perhaps we can
+                join forces in a fantastic team to deliver creative and valuable
+                solutions for project needs.
+                <br /> Let's chat!
             </p>
             <img
                 src={avatarImg}

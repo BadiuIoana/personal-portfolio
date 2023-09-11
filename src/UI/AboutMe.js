@@ -35,13 +35,13 @@ const AboutMe = (props) => {
                     <span className='highlighted'>Frontend Developer</span>.
                 </h1>
                 <p>
-                    For almost <b>4 years</b> I've been working as a web
-                    developer. Starting by taking part in a PHP internship in
-                    Laravel, I am working diligently every day to enrich my
-                    knowledge regarding frontend technologies. I've been working
-                    with projects in{" "}
+                    I've been working as a web developer for nearly{" "}
+                    <b>four years</b>. My journey began with a PHP internship
+                    focused on Laravel, and I've been dedicated to expanding my
+                    knowledge in frontend technologies ever since. I've had the
+                    opportunity to work on projects in various industries,
+                    including{" "}
                     <b>
-                        different industries, such as{" "}
                         <span className='highlighted'>
                             real estate, law and marketing
                         </span>
@@ -49,27 +49,31 @@ const AboutMe = (props) => {
                     .
                 </p>
                 <p>
-                    I work especially as a frontend developer, but I understand
-                    and practice the backend when needed.
+                    Primarily, I specialize in frontend development, but I'm
+                    also proficient in backend development when the need arises.
                 </p>
 
                 <p>
                     <b>
-                        I've learned React using courses and practical
+                        I've learned React through courses and practical
                         challenges for developing client-side apps.{" "}
                         <span className='highlighted'>
                             {" "}
-                            I'm really interested to work in the future with
-                            React or any other JavaScript framework.
+                            I'm really interested to work with React or any
+                            other JavaScript framework in the future.
                         </span>
                     </b>
                 </p>
                 <p>
-                    My main goal is to become a better frontend developer, by
-                    learning, practicing and bringing my contribution within a
-                    team for future projects.
+                    My primary goal is to enhance my skills as a frontend
+                    developer by continually learning, practicing, and
+                    collaborating effectively within a team on upcoming
+                    projects.
                 </p>
-                <p>My goal sounds familiar? Let's have a chat!</p>
+                <p>
+                    "Do my goals resonate with yours? Let's connect and have a
+                    conversation!"
+                </p>
                 <div className='button-wrapper'>
                     <Button
                         title='Contact'

@@ -6,7 +6,7 @@ const TimelineResume = () => {
         <section className='resume-section animated-section' id='resume'>
             <div className='wrapper'>
                 <div className='title-description'>
-                    <h2>My professional growth in a nutshell</h2>
+                    <h2>My Professional Growth in a Nutshell</h2>
                 </div>
                 <ul className='timeline'>
                     <li className='timeline-event'>
@@ -16,48 +16,29 @@ const TimelineResume = () => {
 
                         <div className='timeline-event-content'>
                             <p className='timeline-event-thumbnail'>
-                                September 2019 - Present
+                                September 2019 to Present
                             </p>
                             <h3>Roweb Development</h3>
                             <h4>Pitesti, Romania</h4>
                             <p>
-                                Strong knowledge of HTML, CSS and JavaScript;
+                                Implement responsive design using CSS,
+                                Javascript (Vue.js, Jquery) and HTML.
                                 <br />
-                                Maintain, update and develop new functionalities
-                                for a CMS (Content Management System) platform;
+                                One year of experience using the Vue.js
+                                framework on a real estate project.
                                 <br />
-                                Implement responsive user interfaces based on
-                                the design specifications;
+                                Maintaining Laravel projects and adding new
+                                functionalities as needed.
                                 <br />
-                                Develop functionality for various specifications
-                                using PHP;
+                                Developing new features and maintaining a CMS
+                                platform (using plain PHP, JavaScript, jQuery,
+                                CSS, HTML, and MySQL).
                                 <br />
                                 [...]
                             </p>
                         </div>
                     </li>
-                    <li className='timeline-event'>
-                        <label className='timeline-event-icon'></label>
-                        <div className='timeline-event-content'>
-                            <p className='timeline-event-thumbnail'>
-                                October 2017 - July 2020
-                            </p>
-                            <h3>Universitatea din Pitesti</h3>
-                            <h4>
-                                Bachelor's degree, Informatics (October 2017 -
-                                July 2020)
-                            </h4>
-                            <p>
-                                Training at Prodinf Software (Java applications
-                                and MySQL queries);
-                                <br />
-                                Internship at Roweb Development - getting
-                                started with Laravel framework;
-                                <br />
-                                Web application workshop.
-                            </p>
-                        </div>
-                    </li>
+
                     <li className='timeline-event'>
                         <label className='timeline-event-icon'></label>
                         <div className='timeline-event-content'>
@@ -66,16 +47,36 @@ const TimelineResume = () => {
                             </p>
                             <h3>Vilnius University</h3>
                             <h4>
-                                One semester scholarship, Informatics (August
-                                2018 - February 2019)
+                                Faculty of Mathematics and Informatics,
+                                Lithuania
                             </h4>
+                            <p>One semester scholarship, Informatics [...]</p>
+                        </div>
+                    </li>
+                    <li className='timeline-event'>
+                        <label className='timeline-event-icon'></label>
+                        <div className='timeline-event-content'>
+                            <p className='timeline-event-thumbnail'>
+                                October 2017 - July 2020
+                            </p>
+                            <h3>University of Pitesti</h3>
+                            <h4>Department of Mathematics and Informatics</h4>
+                            <p>
+                                Training at Prodinf Software: Focused on Java
+                                applications and MySQL queries.
+                                <br />
+                                Internship at Roweb Development - Introduction
+                                to the Laravel framework.
+                                <br />
+                                Bachelor's degree in Informatics.
+                            </p>
                         </div>
                     </li>
                 </ul>
                 <div className='download-resume'>
                     <p>
-                        Are you interested to know more about me?
-                        <br /> Download the complete version of the PDF resume.
+                        Interested to learn more about me?
+                        <br /> Download the full PDF resume.
                     </p>
                     <Button
                         title='Download'
