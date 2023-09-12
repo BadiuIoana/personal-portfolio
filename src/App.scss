@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+body {
+    font-family: "Lato", sans-serif;
+}
+*,
+html {
+    scroll-behavior: smooth !important;
+}
+
+:root {
+    --light-blue: #f0f8ff;
+    --gray: #e5e4e2;
+    --azure: #007fff;
+    --intel-blue: #6190e8;
+    --intel-blue-pale: #6190e898;
+    --duke-blue: #012169;
+    --iris: #5a4fcf;
+    --dark-gray: #242424;
+    --almost-black: #151515;
+}
+
+p {
+    font-size: 1.125em;
+    font-weight: 500;
+    line-height: 1.33333em;
+    font-family: "Lato", sans-serif;
+    color: var(--almost-black);
+}
+
+.wrapper {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 2rem 1.3rem;
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+    line-height: 1em;
+    margin: 0 auto 2rem auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.animated-section {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@for $i from 1 through 11 {
+    .logo:nth-child(#{$i}) {
+        transition-delay: $i * 100;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .animated-section {
+        transition: none;
+    }
+}

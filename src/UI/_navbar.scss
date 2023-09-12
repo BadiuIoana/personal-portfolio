@@ -1,0 +1,192 @@
+.nav-wrapper {
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: fixed;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 2px dotted #ddd;
+    background-color: #ffffff;
+    z-index: 20;
+
+    h1.text-emphasize {
+        font-size: 1rem;
+        font-weight: 900;
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        cursor: default;
+    }
+
+    nav {
+        position: absolute;
+        text-align: center;
+        top: 100%;
+        right: 0;
+        left: 0;
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform 400ms ease-in-out;
+        background-image: url(../assets/wave-bg.svg);
+        background-size: cover;
+        height: 100vh;
+
+        ul {
+            padding-left: 0;
+            li {
+                list-style: none;
+                padding: 0.75rem 0;
+
+                text-decoration: none;
+                color: #ffffff;
+                font-size: 18px;
+                opacity: 0;
+                font-weight: 700;
+                transition: opacity 150ms ease-in-out;
+                cursor: pointer;
+            }
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+
+    &:has(.nav-toggle) {
+        transition: background-color 0.1s ease-out 0.3s;
+    }
+
+    &:has(.nav-toggle:checked) {
+        background-color: #6190e8;
+        transition: background-color 0.3s ease-out;
+        h1.text-emphasize {
+            color: #ffffff;
+        }
+    }
+
+    .nav-toggle:checked ~ nav {
+        transform: scale(1, 1);
+
+        ul {
+            li {
+                opacity: 1;
+                transition: opacity 250ms ease-in-out 250ms;
+            }
+        }
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-toggle-label {
+        position: absolute;
+        right: 0;
+        margin-right: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-toggle:not(:checked) ~ .nav-toggle-label {
+        span,
+        span::before,
+        span::after {
+            display: block;
+            background: var(--almost-black);
+            height: 2px;
+            width: 2em;
+            border-radius: 2px;
+            position: relative;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        span {
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+            }
+
+            &::before {
+                bottom: 7px;
+            }
+
+            &::after {
+                top: 7px;
+            }
+        }
+    }
+
+    .nav-toggle:checked ~ .nav-toggle-label {
+        span,
+        span::before,
+        span::after {
+            display: block;
+            background: #ffffff;
+            height: 2px;
+            width: 2em;
+            position: relative;
+            transform: rotate(45deg);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        span {
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0px;
+                transform: rotate(-90deg);
+            }
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+        padding: 0 1rem;
+        transform-origin: top;
+        justify-content: space-around;
+        .nav-toggle-label {
+            display: none;
+        }
+
+        nav {
+            all: unset;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-basis: 57%;
+
+            ul {
+                display: flex;
+                gap: 1rem;
+                justify-content: flex-end;
+
+                li {
+                    opacity: 1;
+                    color: var(--almost-black);
+                }
+            }
+
+            .social-icons {
+                img {
+                    filter: none;
+                }
+            }
+        }
+
+        h1.text-emphasize {
+            font-size: 1.2rem;
+            color: var(--almost-black);
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.work-section {
+    .cards-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    p {
+        &.description {
+            text-align: center;
+            font-style: italic;
+        }
+    }
+
+    @media (min-width: 600px) {
+        .cards-wrapper {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media (min-width: 1000px) {
+        .cards-wrapper {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+    }
+}
