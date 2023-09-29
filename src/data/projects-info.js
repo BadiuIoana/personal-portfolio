@@ -5,7 +5,7 @@ const projects = [
         title: "Interactive comments section",
         categories: ["React", "HTML & CSS"],
         description:
-            "Frontend Mentor challenge - builind a CRUD comment section based on a data.json file.",
+            "Frontend Mentor Challenge: Building a CRUD Comment Section Using a data.json File.",
         liveUrl: "https://badiu-react-interactive-comments-app.netlify.app",
         githubLink:
             "https://github.com/BadiuIoana/interactive-comments-section",
@@ -16,7 +16,8 @@ const projects = [
         title: "REST Countries API with color theme switcher",
         categories: ["React", "HTML & CSS", "API"],
         description:
-            "Frontend Mentor challenge - Fetch data, filter the result, search countries, see country details page, switch theme, use pagination",
+            "Frontend Mentor Challenge: Fetching Data, Filtering Results, Searching Countries, Viewing Country Details, Theme Switching, and Implementing Pagination.",
+
         liveUrl: "https://badiu-react-countries-app.netlify.app",
         githubLink: "https://github.com/BadiuIoana/react-rest-country-api",
     },
@@ -26,12 +27,35 @@ const projects = [
         title: "Todo app",
         categories: ["Vue.js", "HTML & CSS"],
         description:
-            "Frontend Mentor challenge - add, delete, filter the todos",
+            "Frontend Mentor Challenge: Adding, Deleting, Drag & Drop and Filtering Todos.",
+
         liveUrl: "https://badiu-vue-to-do-app.netlify.app/",
         githubLink: "https://github.com/BadiuIoana/vue-to-do-app",
     },
+
     {
         id: 4,
+        image: "/react-meals.png",
+        title: "Meal Ordering System in React",
+        categories: ["React", "HTML & CSS", "Firebase DB"],
+        description:
+            "React project following a tutorial by Maximilian Schwarzmüller (Udemy course).",
+
+        liveUrl: "https://food-order-app-max-tut.netlify.app/",
+        githubLink: "https://github.com/BadiuIoana/react-food-order-app",
+    },
+    {
+        id: 5,
+        image: "/react-expense-tracker.png",
+        title: "Expense Tracker Application in React",
+        categories: ["React", "HTML & CSS"],
+        description:
+            "React project following a tutorial by Maximilian Schwarzmüller (Udemy course).",
+        liveUrl: "https://react-expense-tracker-tutorial.netlify.app/",
+        githubLink: "https://github.com/BadiuIoana/react-expense-tracker",
+    },
+    {
+        id: 6,
         image: "/game-pr.png",
         title: "Javascript Game",
         categories: ["Vanilla Javascript", "HTML & CSS"],

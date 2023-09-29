@@ -56,7 +56,19 @@ const FooterSection = (props) => {
                         />
 
                         <p className='copyright'>
-                            © 2023 ioana-badiu-portfolio.netlify.app
+                            © 2023 ioana-badiu-portfolio.netlify.app <br />
+                        </p>
+                        <p>
+                            I designed and created my personal frontend
+                            portfolio <br /> using React.js and SCSS.
+                        </p>
+                        <p>
+                            {" "}
+                            You can find the source code on my GitHub{" "}
+                            <a href='https://github.com/BadiuIoana/personal-portfolio'>
+                                repository
+                            </a>
+                            .
                         </p>
                     </div>
                 </div>
