@@ -1,13 +1,13 @@
 button {
     border: none;
     background: transparent;
-    min-width: 10rem;
     width: 100%;
+    padding: 0;
 
     .fancy {
         background-color: rgba(255, 254, 252);
         display: block;
-        border: 2px solid #000;
+        border: 2px solid var(--cacoa-bean);
         border-radius: 0.4rem;
         box-sizing: border-box;
         cursor: pointer;
@@ -30,7 +30,7 @@ button {
             content: " ";
             width: 1.5625rem;
             height: 2px;
-            background: #000;
+            background: var(--cacoa-bean);
             top: 50%;
             left: 1.5em;
             position: absolute;
@@ -48,7 +48,7 @@ button {
             transition: all 0.3s ease-in-out;
             text-transform: uppercase;
             text-decoration: none;
-            color: #000;
+            color: var(--cacoa-bean);
         }
 
         .top-key {
@@ -83,7 +83,7 @@ button {
 
         &:hover {
             color: white;
-            background: #000;
+            background: var(--cacoa-bean);
         }
 
         &:hover::before {

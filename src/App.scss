@@ -1,43 +1,88 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+:root {
+    //  Colors
+    --prim: #f0dfec;
+    --cucumber: #79b06d;
+    --zahan: #e2f0df;
+    --strikemaster: #bd7eaec0;
+    --forest-green: #0c7122;
+    --cacoa-bean: #421b31;
+    //Typography font sizes
+    --step--2: clamp(0.691rem, 0.657rem + 0.172vi, 0.79rem);
+    --step--1: clamp(0.778rem, 0.739rem + 0.193vi, 0.889rem);
+    --step-0: clamp(0.875rem, 0.832rem + 0.217vi, 1rem);
+    --step-6: clamp(0.984rem, 0.935rem + 0.245vi, 1.125rem);
+    --step-5: clamp(1.107rem, 1.052rem + 0.275vi, 1.266rem);
+    --step-4: clamp(1.246rem, 1.184rem + 0.31vi, 1.424rem);
+    --step-3: clamp(1.402rem, 1.332rem + 0.348vi, 1.602rem);
+    --step-2: clamp(1.577rem, 1.498rem + 0.392vi, 1.802rem);
+    --step-1: clamp(1.774rem, 1.686rem + 0.441vi, 2.027rem);
+}
+
 body {
     font-family: "Lato", sans-serif;
+    --s: 8em;
+    --_g: #d1e7cc62 90deg, #7d917750 0;
+    background: conic-gradient(from 90deg at 2px 2px, var(--_g)),
+        conic-gradient(from 90deg at 1px 1px, var(--_g));
+    background-size: var(--s) var(--s), calc(var(--s) / 5) calc(var(--s) / 5);
 }
+
 *,
 html {
     scroll-behavior: smooth !important;
 }
 
-:root {
-    --light-blue: #f0f8ff;
-    --gray: #e5e4e2;
-    --azure: #007fff;
-    --intel-blue: #6190e8;
-    --intel-blue-pale: #6190e898;
-    --duke-blue: #012169;
-    --iris: #5a4fcf;
-    --dark-gray: #242424;
-    --almost-black: #151515;
-}
-
-p {
-    font-size: 1.125em;
-    font-weight: 500;
-    line-height: 1.33333em;
-    font-family: "Lato", sans-serif;
-    color: var(--almost-black);
-}
-
 .wrapper {
     max-width: 75rem;
     margin: 0 auto;
-    padding: 2rem 1.3rem;
+    padding: 1rem 1.3rem;
+}
+
+h1 {
+    font-size: var(--step-1);
+    color: var(--cacoa-bean);
+    font-weight: 00;
+    margin-top: 2rem;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: var(--step-2);
+    color: var(--cacoa-bean);
+    font-weight: 700;
+}
+
+h3 {
+    font-size: var(--step-3);
+    color: var(--cacoa-bean);
+    font-weight: 600;
+    margin: 0;
+}
+
+h4 {
+    font-size: var(--step-4);
+    color: var(--cacoa-bean);
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+h5 {
+    font-size: var(--step-5);
+    color: var(--cacoa-bean);
+    font-weight: 600;
+    margin: 0;
+}
+
+p {
+    font-size: var(--step-0);
+    font-weight: 600;
+    line-height: 1.8em;
+    font-family: "Lato", sans-serif;
+    color: var(--forest-green);
+}
+
+.text-center {
     text-align: center;
-    line-height: 1em;
-    margin: 0 auto 2rem auto;
 }
 
 .hidden {

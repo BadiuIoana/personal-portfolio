@@ -6,7 +6,9 @@ const TimelineResume = () => {
         <section className='resume-section animated-section' id='resume'>
             <div className='wrapper'>
                 <div className='title-description'>
-                    <h2>My Professional Growth in a Nutshell</h2>
+                    <h2 className='text-center'>
+                        My Professional Growth in a Nutshell
+                    </h2>
                 </div>
                 <ul className='timeline'>
                     <li className='timeline-event'>
@@ -16,23 +18,22 @@ const TimelineResume = () => {
 
                         <div className='timeline-event-content'>
                             <p className='timeline-event-thumbnail'>
-                                September 2019 to Present
+                                September 2019 - December 2023
                             </p>
                             <h3>Roweb Development</h3>
                             <h4>Pitesti, Romania</h4>
                             <p>
-                                Implement responsive design using CSS,
-                                Javascript (Vue.js, Jquery) and HTML.
+                                Implement responsive design using CSS3,
+                                JavaScript (Vue.js, jQuery) and HTML5.
                                 <br />
-                                One year of experience using the Vue.js
-                                framework on a real estate project.
+                                Experience using the Vue.js framework on a real
+                                estate project.
                                 <br />
-                                Maintaining Laravel projects and adding new
-                                functionalities as needed.
+                                Develop new features and maintain a CMS
+                                platform.
                                 <br />
-                                Developing new features and maintaining a CMS
-                                platform (using plain PHP, JavaScript, jQuery,
-                                CSS, HTML, and MySQL).
+                                Experience with MVC software frameworks (Laravel
+                                / Lumen).
                                 <br />
                                 [...]
                             </p>
@@ -50,7 +51,7 @@ const TimelineResume = () => {
                                 Faculty of Mathematics and Informatics,
                                 Lithuania
                             </h4>
-                            <p>One semester scholarship, Informatics [...]</p>
+                            <p>Erasmus+ scholarship for one semester [...]</p>
                         </div>
                     </li>
                     <li className='timeline-event'>
@@ -62,11 +63,11 @@ const TimelineResume = () => {
                             <h3>University of Pitesti</h3>
                             <h4>Department of Mathematics and Informatics</h4>
                             <p>
-                                Training at Prodinf Software: Focused on Java
-                                applications and MySQL queries.
+                                Training at Prodinf Software: Java applications,
+                                Oracle database.
                                 <br />
-                                Internship at Roweb Development - Introduction
-                                to the Laravel framework.
+                                Internship at Roweb Development: Introduction to
+                                the Laravel framework.
                                 <br />
                                 Bachelor's degree in Informatics.
                             </p>
@@ -74,10 +75,10 @@ const TimelineResume = () => {
                     </li>
                 </ul>
                 <div className='download-resume'>
-                    <p>
+                    <h4>
                         Interested to learn more about me?
                         <br /> Download the full PDF resume.
-                    </p>
+                    </h4>
                     <Button
                         title='Download'
                         link='/badiu-ioana-andreea-cv.pdf'

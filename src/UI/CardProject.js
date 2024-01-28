@@ -5,14 +5,14 @@ const CardProject = (props) => {
         <div className='card-prj'>
             <div>
                 <img src={props.project.image} alt='' />
-                <h3>{props.project.title}</h3>
+                <h5>{props.project.title}</h5>
                 <ul className='categories'>
                     {props.project.categories.map((categ) => (
                         <li key={categ}>{categ}</li>
                     ))}
                 </ul>
 
-                <p className='projectDescription'>
+                <p className='project-description'>
                     {props.project.description}
                 </p>
             </div>

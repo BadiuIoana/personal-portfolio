@@ -1,11 +1,11 @@
-import "./_about-us.scss";
-import profilePicture from "../assets/picture-profile.png";
-import profilePictureWebp from "../assets/profile-color.jpg";
+import "./_about-me.scss";
+import profilePicture from "../assets/profile-color2.jpeg";
+import profilePictureWebp from "../assets/profile-color2.webp";
 import Button from "./Button";
 const AboutMe = (props) => {
     return (
         <section
-            className='about-us-section'
+            className='about-me-section'
             id='about-me'
             ref={props.locationInPage}
         >
@@ -32,7 +32,7 @@ const AboutMe = (props) => {
             <div className='content-wrapper'>
                 <h1>
                     Hello! My name is Ioana Badiu and I am a<br />
-                    <span className='highlighted'>Frontend Developer</span>.
+                    <span className='highlighted'>Web Developer</span>.
                 </h1>
                 <p>
                     I've been working as a web developer for nearly{" "}
@@ -70,10 +70,10 @@ const AboutMe = (props) => {
                     collaborating effectively within a team on upcoming
                     projects.
                 </p>
-                <p>
-                    "Do my goals resonate with yours? Let's connect and have a
-                    conversation!"
-                </p>
+                <h4>
+                    Do my goals resonate with yours? Let's connect and have a
+                    conversation!
+                </h4>
                 <div className='button-wrapper'>
                     <Button
                         title='Contact'

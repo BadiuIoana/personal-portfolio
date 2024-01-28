@@ -16,7 +16,7 @@ const projects = [
         title: "REST Countries API with color theme switcher",
         categories: ["React", "HTML & CSS", "API"],
         description:
-            "Frontend Mentor Challenge: Fetching Data, Filtering Results, Searching Countries, Viewing Country Details, Theme Switching, and Implementing Pagination.",
+            "Frontend Mentor Challenge: Fetching Data, Filtering Results, Searching Countries, Viewing Country Details, Theme Switching and Implementing Pagination.",
 
         liveUrl: "https://badiu-react-countries-app.netlify.app",
         githubLink: "https://github.com/BadiuIoana/react-rest-country-api",

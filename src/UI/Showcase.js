@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import "./_showcase.scss";
 import bootstrap from "../assets/technolgogies/bootstrap-svgrepo-com.svg";
 import css from "../assets/technolgogies/css-3-svgrepo-com.svg";
@@ -15,7 +14,7 @@ import vue from "../assets/technolgogies/vue-9-logo-svgrepo-com.svg";
 const Showcase = () => {
     return (
         <div className='wrapper'>
-            <h2>Technical capabilities</h2>
+            <h2 className='text-center'>Technical capabilities</h2>
             <div className='technologies-wrapper'>
                 <img
                     src={html}

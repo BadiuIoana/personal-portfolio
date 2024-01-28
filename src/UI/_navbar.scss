@@ -1,25 +1,26 @@
-.nav-wrapper {
-    max-width: 1400px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
+.navigation {
     position: fixed;
-    margin: 0 auto;
     top: 0;
     left: 0;
     right: 0;
-    border-bottom: 2px dotted #ddd;
-    background-color: #ffffff;
+    border-bottom: 2px dotted var(--zahan);
+    background-color: var(--forest-green);
     z-index: 20;
+    padding: 1rem;
 
-    h1.text-emphasize {
-        font-size: 1rem;
-        font-weight: 900;
-        margin: 0;
-        text-transform: uppercase;
-        letter-spacing: 0.2rem;
+    .nav-wrapper {
+        max-width: 75rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        z-index: 20;
+    }
+
+    .text-emphasize {
+        color: var(--zahan);
         cursor: default;
+        margin: 0;
     }
 
     nav {
@@ -42,7 +43,7 @@
                 padding: 0.75rem 0;
 
                 text-decoration: none;
-                color: #ffffff;
+                color: var(--zahan);
                 font-size: 18px;
                 opacity: 0;
                 font-weight: 700;
@@ -67,10 +68,10 @@
     }
 
     &:has(.nav-toggle:checked) {
-        background-color: #6190e8;
+        background-color: var(--forest-green);
         transition: background-color 0.3s ease-out;
-        h1.text-emphasize {
-            color: #ffffff;
+        .text-emphasize {
+            color: var(--zahan);
         }
     }
 
@@ -102,7 +103,7 @@
         span::before,
         span::after {
             display: block;
-            background: var(--almost-black);
+            background: var(--zahan);
             height: 2px;
             width: 2em;
             border-radius: 2px;
@@ -132,7 +133,7 @@
         span::before,
         span::after {
             display: block;
-            background: #ffffff;
+            background: var(--zahan);
             height: 2px;
             width: 2em;
             position: relative;
@@ -173,20 +174,9 @@
 
                 li {
                     opacity: 1;
-                    color: var(--almost-black);
+                    color: var(--zahan);
                 }
             }
-
-            .social-icons {
-                img {
-                    filter: none;
-                }
-            }
-        }
-
-        h1.text-emphasize {
-            font-size: 1.2rem;
-            color: var(--almost-black);
         }
     }
 }

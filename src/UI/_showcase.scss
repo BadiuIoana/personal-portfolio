@@ -1,11 +1,22 @@
 .technologies-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
+    justify-content: center;
     gap: 20px;
 
-    @media screen and (min-width: 1065px) {
-        justify-content: space-between;
+    img {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
     }
 }
