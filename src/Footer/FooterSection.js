@@ -15,6 +15,8 @@ const FooterSection = (props) => {
         const emailAddress = document.getElementById("email-address");
         emailAddress.setAttribute("href", "mailto:".concat(atob(encEmail)));
     };
+    let currentDate = new Date();
+    let currentYear = currentDate.getFullYear();
     return (
         <div className='contact-section' id='contact'>
             <div className='wrapper'>
@@ -56,7 +58,8 @@ const FooterSection = (props) => {
                         />
 
                         <p className='copyright'>
-                            © 2023 ioana-badiu-portfolio.netlify.app <br />
+                            © {currentYear} ioana-badiu-portfolio.netlify.app{" "}
+                            <br />
                         </p>
                         <p>
                             I designed and created my personal frontend
