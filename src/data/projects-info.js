@@ -63,6 +63,25 @@ const projects = [
         liveUrl: "https://badiu-js-rock-paper-scissors-app.netlify.app",
         githubLink: "https://github.com/BadiuIoana/js-rock-paper-scissors-app",
     },
+    {
+        id: 7,
+        image: "/shapes-game.png",
+        title: "Falling Shapes Javascript Game",
+        categories: ["Vanilla Javascript", "PixiJS"],
+        description:
+            "Simple JavaScript game with falling shapes, built in the PixiJS framework.",
+        liveUrl: "https://badiu-falling-shapes-game.netlify.app/",
+        githubLink: "https://github.com/BadiuIoana/shapes-game-pixijs",
+    },
+    {
+        id: 8,
+        image: "/job-list.png",
+        title: "Job listings with filtering",
+        categories: ["Vanilla Javascript", "Vue.js", "HTML & CSS"],
+        description: "Frontend Mentor Challenge",
+        liveUrl: "https://job-listings-with-filtering-fm.netlify.app/",
+        githubLink: "https://github.com/BadiuIoana/job-listings-with-filtering",
+    },
 ];
 
 export default projects;
