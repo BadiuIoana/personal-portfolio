@@ -18,6 +18,27 @@ const TimelineResume = () => {
 
                         <div className='timeline-event-content'>
                             <p className='timeline-event-thumbnail'>
+                                September 2024 - Present
+                            </p>
+                            <h3>Kunden Broker Companie de Brokeraj S.R.L.</h3>
+                            <h4>Cluj-Napoca, Romania</h4>
+                            <p>
+                                Designing and building an admin panel for
+                                automating email sending.
+                                <br />
+                                Tech stack: PHP, JavaScript, CSS, MySQL.
+                                <br />
+                                [...]
+                            </p>
+                        </div>
+                    </li>
+                    <li className='timeline-event'>
+                        <div className='timeline-event-icon'>
+                            <label className='icon'></label>
+                        </div>
+
+                        <div className='timeline-event-content'>
+                            <p className='timeline-event-thumbnail'>
                                 September 2019 - December 2023
                             </p>
                             <h3>Roweb Development</h3>
